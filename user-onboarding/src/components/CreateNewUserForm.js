@@ -59,7 +59,7 @@ const NewUserForm = (props)=>{
             {formErrors['email'] ? <ErrorMessage>{formErrors['email']}</ErrorMessage>:<EmptySpace>0</EmptySpace>}
             {formErrors['password'] ? <ErrorMessage>{formErrors['password']}</ErrorMessage>:<EmptySpace>0</EmptySpace>}
             </ErrorMessages>
-            <form>
+            <form id="createUserForm">
                 <label for="name">
                     <input
                         type="text"
@@ -101,6 +101,7 @@ const NewUserForm = (props)=>{
                     </p>
                     <input
                         type="submit"
+                        name='submitBtn'
                         value="Create New Friend"
                         onClick={(evt)=>{
                             setAddingUser(true); 
